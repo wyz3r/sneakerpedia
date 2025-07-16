@@ -1,0 +1,22 @@
+[
+  {
+    "id": "lobster-2008",
+    "name": "Nike SB Dunk Low 'Lobster'",
+    "brand": "Nike",
+    "model": "SB Dunk Low",
+    "releaseDate": "2008-06-01",
+    "stores": ["Concepts", "Nike SNKRS"],
+    "image": "/images/lobster.jpg",
+    "description": "El Nike SB Dunk Low 'Lobster' fue un lanzamiento icónico colaborativo entre Nike y Concepts."
+  },
+  {
+    "id": "travis-scott-1",
+    "name": "Air Jordan 1 Retro High OG 'Travis Scott'",
+    "brand": "Jordan Brand",
+    "model": "Air Jordan 1",
+    "releaseDate": "2019-05-11",
+    "stores": ["SNKRS", "Travis Scott's Website"],
+    "image": "/images/travis.jpg",
+    "description": "Un par con gran hype, caracterizado por el swoosh invertido y materiales premium."
+  }
+]
