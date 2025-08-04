@@ -1,0 +1,6 @@
+<svg width="50" height="85" viewBox="0 0 50 85" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M25 0C11.2 0 0 11.2 0 25C0 42 25 85 25 85C25 85 50 42 50 25C50 11.2 38.8 0 25 0Z" fill="#FF4C4C"/>
+  <circle cx="25" cy="25" r="12" fill="white"/>
+  <!-- Puedes reemplazar esta etiqueta con una imagen embebida o un path de un Jordan 1 -->
+  <text x="50%" y="32" text-anchor="middle" fill="black" font-size="10" font-family="Arial">J1</text>
+</svg>

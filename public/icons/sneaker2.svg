@@ -1,0 +1,18 @@
+<svg width="50" height="85" viewBox="0 0 50 85" xmlns="http://www.w3.org/2000/svg">
+  <!-- Pin de mapa rojo -->
+  <path d="M25 0C11 0 0 12 0 26C0 43 25 85 25 85C25 85 50 43 50 26C50 12 39 0 25 0Z" fill="#D32F2F"/>
+  
+  <!-- Círculo blanco central -->
+  <circle cx="25" cy="27" r="17" fill="#FFFFFF"/>
+
+  <!-- Bolsa de compra -->
+  <path d="M17 20H33V34H17V20Z" stroke="#111111" stroke-width="2" fill="none"/>
+  <circle cx="20" cy="20" r="1.5" fill="#111111"/>
+  <circle cx="30" cy="20" r="1.5" fill="#111111"/>
+  <path d="M20 20 C22 16, 28 16, 30 20" stroke="#111111" stroke-width="2" fill="none"/>
+
+  <!-- Sneaker en el interior -->
+  <path d="M20 30 L21 27 L27 27 Q28 27 29 28 L30 29 Q31 30 30 31 H22 Q20.5 31 20 30 Z
+           M22 28 L24 28 M25 28 L25 29 M26 28 L26 29"
+        stroke="#111111" stroke-width="1" fill="none"/>
+</svg>
