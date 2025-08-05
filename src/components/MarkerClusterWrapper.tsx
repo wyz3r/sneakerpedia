@@ -8,6 +8,8 @@ import 'leaflet.markercluster';
 type Props = {
   markers: Location[];
 };
+// use the pick
+type TypeStore = Pick<Location, 'type'>;
 // const customIcon = new L.Icon({
 //   iconUrl: '/icons/sneaker.svg',
 //   iconSize: [40, 40],
@@ -15,11 +17,21 @@ type Props = {
 //   popupAnchor: [0, -40],
 // });
 
-const CustomDivIcon = L.divIcon({
-  html: `<div class="custom" > </div>`,
-  className: 'custom-icon-wrapped',
-  iconSize: L.point(40, 45, true),
-});
+// const CustomDivIcon = L.divIcon({
+//   html: `<div class="custom" > </div>`,
+//   className: 'custom-icon-wrapped',
+//   iconSize: L.point(40, 45, true),
+// });
+
+const CustomDivIcon = ({ type }: TypeStore): L.DivIcon => {
+  const icon: L.DivIcon = L.divIcon({
+    html: `<div class="${type}" > </div>`,
+    className: 'custom-icon-wrapped',
+    iconSize: L.point(40, 45, true),
+  });
+  return icon;
+};
+
 const createCustomClusterIcon = (cluster: L.MarkerCluster) => {
   const count = cluster.getChildCount();
 
@@ -35,9 +47,10 @@ const MarkerClusterWrapper = ({ markers }: Props) => {
     const markerCluster = L.markerClusterGroup({
       iconCreateFunction: createCustomClusterIcon,
     });
-    markers.forEach(({ position, name, description }) => {
-      const marker = L.marker(position, { icon: CustomDivIcon });
+    markers.forEach(({ position, name, description, type }) => {
+      const marker = L.marker(position, { icon: CustomDivIcon({ type }) });
       marker.on('click', () => {
+        if (map.getZoom() === 18) return;
         map.setView(position, 18);
         map.flyTo(position, 18);
       });
