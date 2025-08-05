@@ -31,7 +31,7 @@
   border: none;
 }
 
-.custom {
+.energy_store {
   position: absolute;
   transform: translate(-50%, -100%); /* Centers the pin's bottom point */
   width: 35px;
@@ -46,12 +46,108 @@
   border: 1px solid;
 }
 
-.custom::after {
+.energy_store::after {
   content: 'S';
   position: absolute;
   text-align: center;
   top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  /* background-color: white; */
+  transform: rotate(45deg);
+  border-radius: 50%; /* Creates the inner circle of the pin */
+  padding-right: 43px;
+  padding-top: 8px;
+  font-weight: 700;
+}
+
+.skateshop {
+  position: absolute;
+  transform: translate(-50%, -100%); /* Centers the pin's bottom point */
+  width: 35px;
+  height: 35px;
+  background-color: #dc06bc;
+  border-radius: 50% 50% 50% 0; /* Creates the teardrop shape */
+  transform: rotate(-45deg); /* Rotates to point downwards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border-color: black;
+  border: 1px solid;
+}
+
+.skateshop::after {
+  content: 'Sk8';
+  position: absolute;
+  text-align: center;
+  /* top: 50%; */
+  /* left: 50%; */
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  /* background-color: white; */
+  transform: rotate(45deg);
+  border-radius: 50%;
+  padding-right: 10px;
+  padding-top: 7px;
+  font-weight: 700;
+}
+
+.boutique {
+  position: absolute;
+  transform: translate(-50%, -100%); /* Centers the pin's bottom point */
+  width: 35px;
+  height: 35px;
+  background-color: hsl(300, 5%, 4%);
+  border-radius: 50% 50% 50% 0; /* Creates the teardrop shape */
+  transform: rotate(-45deg); /* Rotates to point downwards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border-color: black;
+  border: 1px solid;
+}
+
+.boutique::after {
+  content: 'B';
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  /* background-color: white; */
+  transform: rotate(45deg);
+  border-radius: 50%; /* Creates the inner circle of the pin */
+  padding-right: 43px;
+  padding-top: 8px;
+  font-weight: 700;
+}
+
+.wear_store {
+  position: absolute;
+  transform: translate(-50%, -100%); /* Centers the pin's bottom point */
+  width: 35px;
+  height: 35px;
+  background-color: hsl(189, 80%, 31%);
+  border-radius: 50% 50% 50% 0; /* Creates the teardrop shape */
+  transform: rotate(-45deg); /* Rotates to point downwards */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  color: white;
+  border-color: #ffff;
+  border: 1px solid;
+}
+
+.wear_store::after {
+  content: 'W';
+  position: absolute;
+  text-align: center;
+  top: 47%;
+  left: 45%;
   transform: translate(-50%, -50%);
   width: 8px;
   height: 8px;

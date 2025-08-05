@@ -21,6 +21,9 @@ export default function Navbar() {
           <li>
             <LinkComponent title="Contenido" href="/contenido" />
           </li>
+          <li>
+            <LinkComponent title="Medios" href="/contenido" />
+          </li>
         </ul>
       </nav>
     </header>
