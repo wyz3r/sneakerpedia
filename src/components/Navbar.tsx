@@ -3,7 +3,7 @@ import LinkComponent from './LinkComponent';
 
 export default function Navbar() {
   return (
-    <header className="bg-white shadow-md" style={{ position: 'fixed', width: '100%', zIndex: 4 }}>
+    <header className="bg-white shadow-md w-full z-[4] fixed ">
       <nav className="px-6 py-4">
         <ul className="flex space-x-8">
           <li>

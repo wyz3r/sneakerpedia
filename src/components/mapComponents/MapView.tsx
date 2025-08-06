@@ -6,15 +6,15 @@ import { MapContainer, TileLayer, useMapEvent } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
-import '../app/styles/maps.css';
-
+import '../../app/styles/maps.css';
 import L from 'leaflet';
 // import { useEffect, useState } from 'react';
 import { useEffect } from 'react';
 
 import MarkerClusterWrapper from './MarkerClusterWrapper';
-import { Location } from '@/types/locations';
-import storeLocation from '../data/stores.json';
+import { Places } from '@/types/places';
+import storeLocation from '../../data/stores.json';
+import ZoomOutButton from './ZoomOutButton';
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -37,7 +37,7 @@ L.Icon.Default.mergeOptions({
 //   return null;
 // }
 
-const locations: Location[] = storeLocation as Location[];
+const locations: Places[] = storeLocation as Places[];
 
 const MapClickHandler = () => {
   useMapEvent('click', (e) => {
@@ -50,35 +50,28 @@ const MapClickHandler = () => {
 };
 
 const MapView = () => {
-  // const [selectedMarker, setSelectedMarker] = useState<{
-  //   id: string;
-  //   position: L.LatLngExpression;
-  // } | null>(null);
-
-  // const handlerInfoMarket = (marker: any) => {
-  //   console.log('🧠 Marcador clickeado:', marker.position);
-  //   console.log(selectedMarker);
-  //   setSelectedMarker({ id: '1', position: marker.position });
-  // };
   useEffect(() => {}, []);
   return (
-    <div style={{ height: '800px', width: '100%' }}>
+    <div className="h-[850px] w-full">
       <MapContainer
-        center={[19.4326, -99.1332]}
+        className="h-full w-full"
+        center={[20.1178, -99.05273]}
         zoom={6}
         maxZoom={18}
         scrollWheelZoom={true}
-        style={{ height: '100%', width: '100%' }}
         zoomControl={false}
       >
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
+        <ZoomOutButton positions={locations} />
+
         {/* <TileLayer
           attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://www.stamen.com/" target="_blank">Stamen Design</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}{r}.png"
         /> */}
+
         <MapClickHandler />
         <MarkerClusterWrapper markers={locations} />
 
