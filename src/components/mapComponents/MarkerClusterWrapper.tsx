@@ -1,15 +1,18 @@
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet';
-import { Location } from '@/types/locations';
+import { Places } from '@/types/places';
 
 import L from 'leaflet';
 import 'leaflet.markercluster';
 
 type Props = {
-  markers: Location[];
+  markers: Places[];
 };
 // use the pick
-type TypeStore = Pick<Location, 'type'>;
+type TypeStore = Pick<Places, 'type'>;
+
+//if U want to use the Icon svg or png
+
 // const customIcon = new L.Icon({
 //   iconUrl: '/icons/sneaker.svg',
 //   iconSize: [40, 40],
@@ -17,16 +20,10 @@ type TypeStore = Pick<Location, 'type'>;
 //   popupAnchor: [0, -40],
 // });
 
-// const CustomDivIcon = L.divIcon({
-//   html: `<div class="custom" > </div>`,
-//   className: 'custom-icon-wrapped',
-//   iconSize: L.point(40, 45, true),
-// });
-
 const CustomDivIcon = ({ type }: TypeStore): L.DivIcon => {
   const icon: L.DivIcon = L.divIcon({
-    html: `<div class="${type}" > </div>`,
-    className: 'custom-icon-wrapped',
+    html: `<div class=" markersPoint ${type}" > </div>`,
+    className: 'custom-icon-wrp',
     iconSize: L.point(40, 45, true),
   });
   return icon;
@@ -41,6 +38,7 @@ const createCustomClusterIcon = (cluster: L.MarkerCluster) => {
     iconSize: L.point(40, 40, true),
   });
 };
+
 const MarkerClusterWrapper = ({ markers }: Props) => {
   const map = useMap();
   useEffect(() => {
@@ -50,9 +48,9 @@ const MarkerClusterWrapper = ({ markers }: Props) => {
     markers.forEach(({ position, name, description, type }) => {
       const marker = L.marker(position, { icon: CustomDivIcon({ type }) });
       marker.on('click', () => {
-        if (map.getZoom() === 18) return;
-        map.setView(position, 18);
-        map.flyTo(position, 18);
+        if (map.getZoom() >= 15) return;
+        map.setView(position, 15);
+        map.flyTo(position, 15);
       });
       if (name)
         marker.bindPopup(`<strong>${name}</strong>
@@ -60,7 +58,6 @@ const MarkerClusterWrapper = ({ markers }: Props) => {
               ${description}`);
 
       markerCluster.addLayer(marker);
-      //   markerCluster.addLayer(marker2);
     });
 
     markerCluster.on('clusterclick', (event: any) => {
@@ -68,6 +65,7 @@ const MarkerClusterWrapper = ({ markers }: Props) => {
       const childMarkers = cluster.getAllChildMarkers();
       console.log(`Cluster con ${childMarkers.length} elementos`);
       // Hacer zoom para mostrar todos los markers del cluster
+      console.log(cluster.getBounds());
       map.fitBounds(cluster.getBounds());
     });
 
@@ -77,6 +75,7 @@ const MarkerClusterWrapper = ({ markers }: Props) => {
       map.removeLayer(markerCluster);
     };
   }, [map, markers]);
+
   return null;
 };
 

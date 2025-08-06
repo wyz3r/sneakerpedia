@@ -3,7 +3,7 @@ import { Metadata } from 'next';
 // import dynamic from 'next/dynamic';
 // const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
 
-import ClientWrapper from '@/components/ClientWrapper';
+import ClientWrapper from '@/components/mapComponents/ClientWrapper';
 
 export const metadata: Metadata = {
   title: 'Tiendas de energia',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function Shops() {
   return (
-    <main className="p-4">
+    <main className="pl-1 pr-1">
       <ClientWrapper />
     </main>
   );

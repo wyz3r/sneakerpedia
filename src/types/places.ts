@@ -1,6 +1,6 @@
 import { LatLngExpression } from 'leaflet';
 
-export interface Location {
+export interface Places {
   name: string;
   description: string;
   portrait?: string;
