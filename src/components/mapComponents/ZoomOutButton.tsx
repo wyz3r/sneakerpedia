@@ -2,9 +2,9 @@
 import { useMap } from 'react-leaflet';
 import { getBoundsFromMarkers } from '@utils/getBoundsFromMarkers';
 import { useEffect, useState } from 'react';
-import { Location } from '@/types/places';
+import { Places } from '@/types/places';
 
-type LatLngType = Pick<Location, 'position'>;
+type LatLngType = Pick<Places, 'position'>;
 
 type Props = {
   positions: LatLngType[];
