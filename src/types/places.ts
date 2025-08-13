@@ -6,8 +6,10 @@ export interface Places {
   portrait?: string;
   address?: string;
   events?: string;
-  type?: string;
+  linkMaps?: string;
+  storeCategory: string;
   upcoming?: any;
+  profilePhoto?: string;
   onlineStore?: string;
   position: LatLngExpression;
 }

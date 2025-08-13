@@ -1,18 +1,14 @@
-// 'use client';
 import { Metadata } from 'next';
-// import dynamic from 'next/dynamic';
-// const MapView = dynamic(() => import('@/components/MapView'), { ssr: false });
-
 import ClientWrapper from '@/components/mapComponents/ClientWrapper';
-
 export const metadata: Metadata = {
   title: 'Tiendas de energia',
   description: 'Tiendas de energia en Mexico',
 };
+import '../styles/maps.css';
 
 export default function Shops() {
   return (
-    <main className="pl-1 pr-1">
+    <main className="">
       <ClientWrapper />
     </main>
   );

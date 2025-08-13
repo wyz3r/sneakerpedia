@@ -9,4 +9,18 @@ export default {
   theme: {
     extend: {},
   },
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        '.reset-heading': {
+          fontSize: 'revert',
+          fontWeight: 'revert',
+          margin: 'revert',
+        },
+        '.all-revert': {
+          all: 'revert',
+        },
+      });
+    },
+  ],
 };
