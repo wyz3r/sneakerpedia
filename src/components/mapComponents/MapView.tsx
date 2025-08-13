@@ -7,8 +7,8 @@ import 'leaflet/dist/leaflet.css';
 import 'leaflet.markercluster/dist/MarkerCluster.css';
 import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import '../../app/styles/maps.css';
+import '../../app/styles/reset-pop-leaflet.css';
 import L from 'leaflet';
-// import { useEffect, useState } from 'react';
 import { useEffect } from 'react';
 
 import MarkerClusterWrapper from './MarkerClusterWrapper';
@@ -52,7 +52,7 @@ const MapClickHandler = () => {
 const MapView = () => {
   useEffect(() => {}, []);
   return (
-    <div className="h-[850px] w-full">
+    <div className="h-[100vh] w-full">
       <MapContainer
         className="h-full w-full"
         center={[20.1178, -99.05273]}

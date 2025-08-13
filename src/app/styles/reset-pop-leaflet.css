@@ -1,0 +1,64 @@
+/* Reset general del popup */
+.leaflet-popup-content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  box-shadow: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 10px 15px;
+  width: 370px;
+  gap: 5px;
+}
+
+/* Reset del contenido */
+.leaflet-popup-content {
+  margin: 0px;
+  padding: 0px;
+  width: 100% !important;
+}
+
+.leaflet-popup-tip {
+  background: black;
+}
+
+.marker-info {
+  width: 100%;
+}
+
+.marker-image {
+  margin: -10px -10px;
+  width: calc(100% + 20px);
+}
+.marker-image-wrapper {
+  margin: 0 0 1rem;
+}
+.leaflet-popup-content p {
+  margin: 0;
+}
+
+.leaflet-container a.leaflet-popup-close-button {
+  color: white;
+}
+
+.maps-target {
+  color: white;
+  text-decoration: none;
+}
+
+.maps-target:link {
+  color: white; /* Unvisited link color */
+}
+.maps-target:hover {
+  color: red; /* Color when the mouse hovers over the link */
+}
+.maps-target:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+@media (orientation: portrait) {
+  .leaflet-popup-content-wrapper {
+    width: 280px;
+  }
+}
