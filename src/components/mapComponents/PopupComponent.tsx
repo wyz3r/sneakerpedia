@@ -7,6 +7,7 @@ const PopupComponent = ({
   address,
   onlineStore,
   storeCategory,
+  linkMaps,
 }: any) => {
   const recortarProtocoloSimple = (url: string) => {
     if (url === undefined) return;
@@ -19,7 +20,11 @@ const PopupComponent = ({
         <div className="marker-image-wrapper">
           <img
             className="rounded-tl-xl rounded-tr-xl"
-            src={profilePhoto === undefined ? 'https://placehold.co/600x400' : profilePhoto}
+            src={
+              profilePhoto === undefined || profilePhoto === ''
+                ? 'https://placehold.co/600x400'
+                : profilePhoto
+            }
             alt="image"
           />
         </div>
@@ -34,7 +39,11 @@ const PopupComponent = ({
       <div className="marker-content">
         <div>
           <strong>Location:</strong>
-          {' ' + address} <br />
+          {' ' + address + ' '}{' '}
+          <a className="maps-target" href={linkMaps} target="_blank">
+            🔗
+          </a>{' '}
+          <br />
           <strong>online Store:</strong>{' '}
           <a className="maps-target" href={onlineStore} target="_blank">
             {recortarProtocoloSimple(onlineStore)}

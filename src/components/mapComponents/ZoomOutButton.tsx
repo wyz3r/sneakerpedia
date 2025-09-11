@@ -10,7 +10,7 @@ type Props = {
   positions: LatLngType[];
 };
 
-const ZoomOutButton = ({ positions }: Props) => {
+const ZoomOutButton = ({ positions = [] }: Props) => {
   const map = useMap();
 
   const [visible, setVisible] = useState(false);

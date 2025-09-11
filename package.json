@@ -11,6 +11,7 @@
     "build:tailwind": "node_modules/.bin/tailwindcss -i ./src/input.css -o ./public/output.css --verbose"
   },
   "dependencies": {
+    "@tanstack/react-query": "^5.87.4",
     "leaflet": "^1.9.4",
     "leaflet.markercluster": "^1.5.3",
     "next": "15.3.4",

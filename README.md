@@ -44,3 +44,7 @@ docker-compose up --build
 
 
 ```
+
+## pendientes
+
+[] necesito hacer los schemas para tenis, tiendas y autores , marcas ,
