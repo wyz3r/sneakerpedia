@@ -1,13 +1,17 @@
 [
   {
-    "id": "lobster-2008",
+    "id": "lobster",
     "name": "Nike SB Dunk Low 'Lobster'",
     "brand": "Nike",
     "model": "SB Dunk Low",
     "releaseDate": "2008-06-01",
     "stores": ["Concepts", "Nike SNKRS"],
     "image": "/images/lobster.jpg",
-    "description": "El Nike SB Dunk Low 'Lobster' fue un lanzamiento icónico colaborativo entre Nike y Concepts."
+    "description": "El Nike SB Dunk Low 'Lobster' fue un lanzamiento icónico colaborativo entre Nike y Concepts.",
+    "officialColorway": "",
+    "styleCode": "",
+    "colourway": "",
+    "nickname": ""
   },
   {
     "id": "travis-scott-1",

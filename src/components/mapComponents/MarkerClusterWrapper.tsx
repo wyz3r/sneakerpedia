@@ -13,7 +13,7 @@ type Props = {
   markers: Places[];
 };
 
-const MarkerClusterWrapper = ({ markers }: Props) => {
+const MarkerClusterWrapper = ({ markers = [] }: Props) => {
   const map = useMap();
   useEffect(() => {
     const markerCluster = L.markerClusterGroup({

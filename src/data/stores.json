@@ -10,15 +10,34 @@
     "position": [19.4210986, -99.1559318]
   },
   {
-    "name": "Soul Snkr Store",
+    "name": "LUST Masaryk",
     "description": "Tienda de energia ",
     "storeCategory": "energy_store",
+    "profilePhoto": "/mazaryk.jpeg",
+    "onlineStore": "https://lustmexico.com",
+    "address": "Av. Pdte. Masaryk 326, Polanco, Polanco IV Secc, Miguel Hidalgo, 11510 Ciudad de México, CDMX",
+    "linkMaps": "https://www.google.com.mx/maps/place/Lust+Masaryk/@19.4313419,-99.197434,17z/data=!3m1!4b1!4m6!3m5!1s0x85d202021c3ce90f:0x35321108b692e7c7!8m2!3d19.4313369!4d-99.1948591!16s%2Fg%2F11c0rmpxfg?hl=es&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D",
+
+    "position": [19.4314373, -99.1948638]
+  },
+  {
+    "name": "Soul Snkr Store",
+    "description": "Tienda de energia",
+    "storeCategory": "energy_store",
+    "profilePhoto": "",
+    "onlineStore": "https://www.soul.com.mx/",
+    "address": "Av. P.º de la Reforma 264, Cuauhtémoc, 06600 Ciudad de México, CDMX",
+    "linkMaps": "https://www.google.com/maps/place/Soul+SNKR+Boutique/@19.4281881,-99.1665862,17z/data=!3m1!4b1!4m6!3m5!1s0x85d1f8d37181207b:0x8a64298a2ab131b0!8m2!3d19.4281831!4d-99.1640113!16s%2Fg%2F11ckdzs477?entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D",
     "position": [19.428249832883786, -99.16396021842957]
   },
   {
     "name": "Alive Centro",
     "description": "Tienda de energia ",
     "storeCategory": "energy_store",
+    "profilePhoto": "/alive-centro.webp",
+    "onlineStore": "https://alivemexico.com/",
+    "address": "Isabel La Católica 87, Centro Histórico de la Cdad. de México, Centro, Cuauhtémoc, 06080 Ciudad de México, CDMX",
+    "linkMaps": "https://www.google.com.mx/maps/place/Alive+Premium+Store+DF/@19.4278021,-99.1397871,17z/data=!3m2!4b1!5s0x85d1fed22cd433a1:0x1c31e3308f42db8f!4m6!3m5!1s0x85d1fed22ceb0be1:0xe6862b7e62ad98f8!8m2!3d19.4277971!4d-99.1372122!16s%2Fg%2F11bw46hgfg?hl=es&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D",
     "position": [19.4276736, -99.137505]
   },
   {
@@ -26,14 +45,12 @@
     "description": "Tienda de energia ",
     "profilePhoto": "/ALIVE_SUR.jpg",
     "storeCategory": "energy_store",
+    "onlineStore": "https://alivemexico.com/",
+    "address": "Av. de los Insurgentes Sur 2098, Chimalistac, Álvaro Obregón, 01000 Ciudad de México, CDMX",
+    "linkMaps": "https://www.google.com.mx/maps/place/Alive+Premium+Store+Sur/@19.3461249,-99.1903089,17z/data=!4m14!1m7!3m6!1s0x85d1fff84fa24589:0x464e407396e004bc!2sAlive+Premium+Store+Sur!8m2!3d19.3461199!4d-99.187734!16s%2Fg%2F11c73dv2y_!3m5!1s0x85d1fff84fa24589:0x464e407396e004bc!8m2!3d19.3461199!4d-99.187734!16s%2Fg%2F11c73dv2y_?hl=es&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D",
     "position": [19.3459779, -99.188014]
   },
-  {
-    "name": "LUST Masaryk",
-    "description": "Tienda de energia ",
-    "storeCategory": "energy_store",
-    "position": [19.4314373, -99.1948638]
-  },
+
   {
     "name": "Lust Guadalajara",
     "description": "Tienda de energia ",

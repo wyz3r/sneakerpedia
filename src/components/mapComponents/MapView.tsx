@@ -9,12 +9,12 @@ import 'leaflet.markercluster/dist/MarkerCluster.Default.css';
 import '../../app/styles/maps.css';
 import '../../app/styles/reset-pop-leaflet.css';
 import L from 'leaflet';
-import { useEffect } from 'react';
 
 import MarkerClusterWrapper from './MarkerClusterWrapper';
 import { Places } from '@/types/places';
-import storeLocation from '../../data/stores.json';
+// import storeLocation from '../../data/stores.json';
 import ZoomOutButton from './ZoomOutButton';
+import { useQuery } from '@tanstack/react-query';
 
 delete (L.Icon.Default.prototype as any)._getIconUrl;
 
@@ -37,7 +37,7 @@ L.Icon.Default.mergeOptions({
 //   return null;
 // }
 
-const locations: Places[] = storeLocation as Places[];
+// const locations: Places[] = [] as Places[];
 
 const MapClickHandler = () => {
   useMapEvent('click', (e) => {
@@ -50,7 +50,24 @@ const MapClickHandler = () => {
 };
 
 const MapView = () => {
-  useEffect(() => {}, []);
+  const { data: locations, status } = useQuery({
+    queryKey: ['locations'],
+    queryFn: async () => {
+      return fetch('/tiendas/api')
+        .then((response) => {
+          return response.json();
+        })
+        .then(({ data }) => {
+          return data as Places[];
+        });
+    },
+    initialData: [] as Places[],
+  });
+  console.log(locations);
+  console.log(status);
+  // useEffect(() => {
+  //   const storeLocation = aw
+  // }, []);
   return (
     <div className="h-[100vh] w-full">
       <MapContainer
